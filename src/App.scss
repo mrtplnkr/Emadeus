@@ -1,0 +1,78 @@
+@import '../node_modules/susy/sass/susy';
+$breakpoints: (
+  s: 400px,
+  m: 500px,
+  l: 800px,
+);
+@mixin breakpoint($bp, $rule: min-width) {
+    @media screen and (#{$rule}: map-get($breakpoints, $bp)) {
+        @content;
+    }
+}
+
+$lightblue: #61DAFB;
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+h1 {
+  padding: 0.2em;
+  margin: 0.2em;
+}
+p {
+  padding: 0.1em;
+  margin: 0.1em;
+}
+
+body {
+  @include container(100%);
+}
+main {
+  @include span(12 of 12);
+}
+aside {
+  @include span(12 of 12);
+}
+.mapContainer {
+  height: 300px;
+  @include span(12 of 12);
+}
+.mapElement {
+  height: 100%;
+  width: 100%;
+}
+
+@include breakpoint(s) {
+  main {
+    @include span(9 of 12);
+  }
+  aside {
+    @include span(3 of 12);
+  }
+  .mapContainer {
+    @include span(12 of 12);
+  }
+}
+
+.row {
+  padding-top: 0.5em;
+}
+
+.previousLocationsDiv {
+  height: 8em;
+  overflow-y: scroll;
+  font-size: 0.8em;
+}
+
+select, input {
+  padding:5px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px $lightblue;
+  box-sizing: border-box;
+}

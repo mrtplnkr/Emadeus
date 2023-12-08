@@ -3,8 +3,9 @@ EMADEUS -> Instrukcija:
 Norint paleisti sistema ivesti komandas
 1. npm install
 2. npm run start
+
 Sukurti produkcijai
-1. npm run build - optimizuoja css bei javascript failus
+3. npm run build - optimizuoja css bei javascript failus
 
 (https://www.eightforums.com/threads/internet-explorer-location-sharing-turn-on-or-off.37005/)
 Daugiau info apie projekta:
